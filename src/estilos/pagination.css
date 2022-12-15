@@ -1,0 +1,26 @@
+.button {
+    border-radius: 90px;
+    background-color: rgb(150, 252, 176);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    width: 150px;
+    height: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration:none;
+    margin: 5px;
+  }
+
+  
+  .button:hover {
+    text-decoration:none;
+    color: rgb(150, 252, 176);
+    background-color:  rgb(255, 255, 255);
+  }
+  
+
+   
+  
