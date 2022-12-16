@@ -7,6 +7,7 @@ import './App.css'
 
 function App() {
 
+
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({})
   const [name, setName] = useState("")
