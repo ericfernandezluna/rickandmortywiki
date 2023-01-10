@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext} from 'react';
 import '../estilos/characters.css'
+import { GlobalContext } from '../context/GlobalContext';
 
-const Characters = ({characters, onLink}) => {
+const Characters = ({characters}) => {
 
-  
+  const {onClickSetUrl, url} = useContext(GlobalContext)
+
   return(
     <>
     {
@@ -15,7 +17,10 @@ const Characters = ({characters, onLink}) => {
           <div className='divcolumna'>
             <h5 className='contenedorTexto'>{item.name}</h5>
             <p className='contenedorTexto'>{item.species}</p>
-            <button className="buttonchar" onClick={() => onLink(item.location.url)}>{item.location.name}</button>
+            <button className="buttonchar" onClick={() => {
+              if(item.location.url === "") {
+                alert('No existe la location')
+                } else {onClickSetUrl(item.location.url)}}}>{item.location.name}</button>
           </div>
         </div>
       ))
